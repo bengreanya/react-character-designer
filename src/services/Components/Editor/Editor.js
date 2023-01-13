@@ -1,6 +1,13 @@
 import { useState } from 'react';
 
-export default function Editor({ setHead, setHeadCount, setBody, setBodyCount }) {
+export default function Editor({
+  setHead,
+  setHeadCount,
+  setBody,
+  setBodyCount,
+  setLegs,
+  setLegCount,
+}) {
   function handleSetHead(e) {
     setHead(e.target.value);
     setHeadCount((prevState) => prevState + 1);
@@ -28,9 +35,9 @@ export default function Editor({ setHead, setHeadCount, setBody, setBodyCount })
           <option value="shirt">Shirt</option>
         </select>
         <select name="legs" onChange={handleSetLegs}>
-          <option value="chick">Hulk</option>
-          <option value="suit">Suit</option>
-          <option value="shirt">Shirt</option>
+          <option value="chicken">Chicken</option>
+          <option value="grinch">Grinch</option>
+          <option value="heels">Heels</option>
         </select>
       </div>
     </div>
