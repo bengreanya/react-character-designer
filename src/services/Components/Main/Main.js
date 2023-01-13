@@ -11,7 +11,7 @@ export default function Main() {
   const [legCount, setLegCount] = useState(0);
   return (
     <main>
-      <Preview head={head} body={body} legs={legs} />
+      <Preview head={head} body={body} legs={legs} headCount={headCount} />
       <Editor
         setHead={setHead}
         setHeadCount={setHeadCount}
