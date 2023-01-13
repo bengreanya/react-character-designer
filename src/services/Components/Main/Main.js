@@ -9,6 +9,7 @@ export default function Main() {
   const [bodyCount, setBodyCount] = useState(0);
   const [legs, setLegs] = useState('Heels');
   const [legCount, setLegCount] = useState(0);
+  const [catchPhrase, setCatchPhrase] = useState('I am boring and do not have a catchphrase');
   return (
     <main>
       <Editor
@@ -18,6 +19,7 @@ export default function Main() {
         setBodyCount={setBodyCount}
         setLegs={setLegs}
         setLegCount={setLegCount}
+        setCatchPhrase={setCatchPhrase}
       />
       <Preview
         head={head}
@@ -26,6 +28,7 @@ export default function Main() {
         headCount={headCount}
         bodyCount={bodyCount}
         legCount={legCount}
+        catchPhrase={catchPhrase}
       />
     </main>
   );

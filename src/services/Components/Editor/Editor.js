@@ -7,7 +7,9 @@ export default function Editor({
   setBodyCount,
   setLegs,
   setLegCount,
+  setCatchPhrase,
 }) {
+  const [inputValue, setInputValue] = useState('');
   function handleSetHead(e) {
     setHead(e.target.value);
     setHeadCount((prevState) => prevState + 1);
@@ -20,7 +22,13 @@ export default function Editor({
     setLegs(e.target.value);
     setLegCount((prevState) => prevState + 1);
   }
-
+  function handleSubmit() {
+    setCatchPhrase(inputValue);
+    setInputValue('');
+  }
+  function handleInputChange(e) {
+    setInputValue(e.target.value);
+  }
   return (
     <div className="editor">
       <div className="form-control">
@@ -37,8 +45,10 @@ export default function Editor({
         <select name="legs" onChange={handleSetLegs}>
           <option value="chicken">Chicken</option>
           <option value="grinch">Grinch</option>
-          <option value="heels">Heels</option>
+          <option value="shirt">Shirt</option>
         </select>
+        <input type="text" value={inputValue} onChange={handleInputChange} />
+        <button onClick={handleSubmit}>Submit</button>
       </div>
     </div>
   );
