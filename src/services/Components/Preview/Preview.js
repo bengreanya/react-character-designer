@@ -1,4 +1,9 @@
 import React from 'react';
-export default function Preview({ head }) {
-  return <img src={`/${head}.png`} />;
+export default function Preview({ head, body }) {
+  return (
+    <>
+      <img src={`/${head}.png`} />
+      <img src={`/${body}.png`} />
+    </>
+  );
 }
