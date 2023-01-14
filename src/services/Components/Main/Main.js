@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Editor from '../Editor/Editor.js';
 import Preview from '../Preview/Preview.js';
+import background from '../../../background.png';
 
 export default function Main() {
   const [head, setHead] = useState('Obama');
@@ -11,7 +12,7 @@ export default function Main() {
   const [legCount, setLegCount] = useState(0);
   const [catchPhrase, setCatchPhrase] = useState('I am boring and do not have a catchphrase');
   return (
-    <main>
+    <main style={{ backgroundImage: `url(${background})` }}>
       <Editor
         setHead={setHead}
         setHeadCount={setHeadCount}
